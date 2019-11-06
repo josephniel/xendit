@@ -1,15 +1,27 @@
 import mongoose from 'mongoose';
 import { connection } from './db';
 
-const Member = connection.model('members', new mongoose.Schema({
-  organization: String,
-  name: String,
-  avatarUrl: String,
-  followerCount: Number,
-  ctime: Date
-}));
+const memberSchema = new mongoose.Schema({
+  organization: {
+    type: String,
+    required: true,
+  },
+  login: {
+    type: String,
+    required: true,
+  },
+  avatarUrl: {
+    type: String,
+    default: '',
+  },
+  followerCount: {
+    type: Number,
+    default: 0,
+  },
+  ctime: {
+    type: Date,
+    default: new Date(),
+  },
+});
 
-export const get_members = async (organization) => {
-  const query = Member.find({organization});
-  return await query.exec();
-};
+export default connection.model('members', memberSchema);

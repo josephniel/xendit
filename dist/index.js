@@ -98,6 +98,30 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./app/controllers/comments.js":
+/*!*************************************!*\
+  !*** ./app/controllers/comments.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"@babel/runtime/regenerator\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _services_comments__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/comments */ \"./app/services/comments.js\");\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  get: function get(req, res) {\n    var organization, comments;\n    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function get$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            organization = req.params.name;\n            _context.next = 3;\n            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(Object(_services_comments__WEBPACK_IMPORTED_MODULE_1__[\"get_comments\"])(organization));\n\n          case 3:\n            comments = _context.sent;\n            res.send({\n              comments: comments\n            }).status(200);\n\n          case 5:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    });\n  },\n  post: function post(req, res) {\n    var organization, comment;\n    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function post$(_context2) {\n      while (1) {\n        switch (_context2.prev = _context2.next) {\n          case 0:\n            organization = req.params.name;\n            _context2.next = 3;\n            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(Object(_services_comments__WEBPACK_IMPORTED_MODULE_1__[\"set_comment\"])(organization, req.body.comment));\n\n          case 3:\n            comment = _context2.sent;\n            res.send(comment).status(201);\n\n          case 5:\n          case \"end\":\n            return _context2.stop();\n        }\n      }\n    });\n  },\n  \"delete\": function _delete(req, res) {\n    var organization;\n    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function _delete$(_context3) {\n      while (1) {\n        switch (_context3.prev = _context3.next) {\n          case 0:\n            organization = req.params.name;\n            _context3.next = 3;\n            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(Object(_services_comments__WEBPACK_IMPORTED_MODULE_1__[\"delete_comments\"])(organization));\n\n          case 3:\n            res.send().status(200);\n\n          case 4:\n          case \"end\":\n            return _context3.stop();\n        }\n      }\n    });\n  }\n});\n\n//# sourceURL=webpack:///./app/controllers/comments.js?");
+
+/***/ }),
+
+/***/ "./app/controllers/members.js":
+/*!************************************!*\
+  !*** ./app/controllers/members.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"@babel/runtime/regenerator\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _services_members__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/members */ \"./app/services/members.js\");\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  get: function get(req, res) {\n    var organization, members;\n    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function get$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            organization = req.params.name;\n            _context.next = 3;\n            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(Object(_services_members__WEBPACK_IMPORTED_MODULE_1__[\"get_members\"])(organization));\n\n          case 3:\n            members = _context.sent;\n            res.send({\n              members: members\n            }).status(200);\n\n          case 5:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    });\n  }\n});\n\n//# sourceURL=webpack:///./app/controllers/members.js?");
+
+/***/ }),
+
 /***/ "./app/controllers/ping.js":
 /*!*********************************!*\
   !*** ./app/controllers/ping.js ***!
@@ -106,7 +130,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"@babel/runtime/regenerator\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _models_comments__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../models/comments */ \"./app/models/comments.js\");\n\n\n\nvar entrypoint = function entrypoint(req, res) {\n  var temp;\n  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function entrypoint$(_context) {\n    while (1) {\n      switch (_context.prev = _context.next) {\n        case 0:\n          _context.next = 2;\n          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(Object(_models_comments__WEBPACK_IMPORTED_MODULE_1__[\"get_comments\"])('sample'));\n\n        case 2:\n          temp = _context.sent;\n          res.send(temp);\n\n        case 4:\n        case \"end\":\n          return _context.stop();\n      }\n    }\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (entrypoint);\n\n//# sourceURL=webpack:///./app/controllers/ping.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nvar entrypoint = function entrypoint(req, res) {\n  res.send('pong');\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (entrypoint);\n\n//# sourceURL=webpack:///./app/controllers/ping.js?");
 
 /***/ }),
 
@@ -118,7 +142,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _bab
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"app\", function() { return app; });\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./router */ \"./app/router.js\");\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./constants */ \"./app/constants.js\");\n\n\n\nvar app = express__WEBPACK_IMPORTED_MODULE_0___default()();\n_router__WEBPACK_IMPORTED_MODULE_1__[\"default\"].map(function (controller) {\n  app[controller.method](controller.route, controller.method_func);\n});\napp.listen(_constants__WEBPACK_IMPORTED_MODULE_2__[\"PORT\"], _constants__WEBPACK_IMPORTED_MODULE_2__[\"HOST\"]);\n\n//# sourceURL=webpack:///./app/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"app\", function() { return app; });\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var mongoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mongoose */ \"mongoose\");\n/* harmony import */ var mongoose__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(mongoose__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./router */ \"./app/router.js\");\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./constants */ \"./app/constants.js\");\n\n\n\n\nvar app = express__WEBPACK_IMPORTED_MODULE_0___default()();\nmongoose__WEBPACK_IMPORTED_MODULE_1___default.a.connect(_constants__WEBPACK_IMPORTED_MODULE_3__[\"MONGODB_URI\"], function (err) {\n  if (err) throw err;\n});\napp.use(express__WEBPACK_IMPORTED_MODULE_0___default.a.json());\n_router__WEBPACK_IMPORTED_MODULE_2__[\"default\"].map(function (controller) {\n  app[controller.method](controller.route, controller.method_func);\n});\napp.listen(_constants__WEBPACK_IMPORTED_MODULE_3__[\"PORT\"], _constants__WEBPACK_IMPORTED_MODULE_3__[\"HOST\"]);\n\n//# sourceURL=webpack:///./app/index.js?");
 
 /***/ }),
 
@@ -126,11 +150,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*!********************************!*\
   !*** ./app/models/comments.js ***!
   \********************************/
-/*! exports provided: get_comments, set_comment */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"get_comments\", function() { return get_comments; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"set_comment\", function() { return set_comment; });\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"@babel/runtime/regenerator\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var mongoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mongoose */ \"mongoose\");\n/* harmony import */ var mongoose__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(mongoose__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _db__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./db */ \"./app/models/db.js\");\n\n\n\nvar Comment = _db__WEBPACK_IMPORTED_MODULE_2__[\"connection\"].model('comments', new mongoose__WEBPACK_IMPORTED_MODULE_1___default.a.Schema({\n  organization: String,\n  comment: String,\n  ctime: Date\n}));\nvar get_comments = function get_comments(organization) {\n  var query;\n  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function get_comments$(_context) {\n    while (1) {\n      switch (_context.prev = _context.next) {\n        case 0:\n          query = Comment.find({\n            organization: organization\n          });\n          _context.next = 3;\n          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(query.exec());\n\n        case 3:\n          return _context.abrupt(\"return\", _context.sent);\n\n        case 4:\n        case \"end\":\n          return _context.stop();\n      }\n    }\n  });\n};\nvar set_comment = function set_comment(organization, comment) {\n  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function set_comment$(_context2) {\n    while (1) {\n      switch (_context2.prev = _context2.next) {\n        case 0:\n          _context2.next = 2;\n          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(Comment.insertMany([{\n            organization: organization,\n            comment: comment,\n            ctime: new Date()\n          }]));\n\n        case 2:\n        case \"end\":\n          return _context2.stop();\n      }\n    }\n  });\n};\n\n//# sourceURL=webpack:///./app/models/comments.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var mongoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mongoose */ \"mongoose\");\n/* harmony import */ var mongoose__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mongoose__WEBPACK_IMPORTED_MODULE_0__);\n\nvar commentSchema = new mongoose__WEBPACK_IMPORTED_MODULE_0___default.a.Schema({\n  organization: {\n    type: String,\n    required: true\n  },\n  comment: {\n    type: String,\n    required: true\n  },\n  isDeleted: {\n    type: Boolean,\n    \"default\": false\n  },\n  ctime: {\n    type: Date,\n    \"default\": new Date()\n  }\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = (mongoose__WEBPACK_IMPORTED_MODULE_0___default.a.model('comments', commentSchema));\n\n//# sourceURL=webpack:///./app/models/comments.js?");
 
 /***/ }),
 
@@ -146,6 +170,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./app/models/members.js":
+/*!*******************************!*\
+  !*** ./app/models/members.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var mongoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mongoose */ \"mongoose\");\n/* harmony import */ var mongoose__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mongoose__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _db__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./db */ \"./app/models/db.js\");\n\n\nvar memberSchema = new mongoose__WEBPACK_IMPORTED_MODULE_0___default.a.Schema({\n  organization: {\n    type: String,\n    required: true\n  },\n  login: {\n    type: String,\n    required: true\n  },\n  avatarUrl: {\n    type: String,\n    \"default\": ''\n  },\n  followerCount: {\n    type: Number,\n    \"default\": 0\n  },\n  ctime: {\n    type: Date,\n    \"default\": new Date()\n  }\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = (_db__WEBPACK_IMPORTED_MODULE_1__[\"connection\"].model('members', memberSchema));\n\n//# sourceURL=webpack:///./app/models/members.js?");
+
+/***/ }),
+
 /***/ "./app/router.js":
 /*!***********************!*\
   !*** ./app/router.js ***!
@@ -154,7 +190,31 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _controllers_ping__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./controllers/ping */ \"./app/controllers/ping.js\");\n\nvar methods = Object.freeze({\n  GET: 'get',\n  POST: 'post',\n  PUT: 'put',\n  DELETE: 'delete'\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = ([{\n  method: methods.GET,\n  route: '/ping',\n  method_func: _controllers_ping__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\n}]);\n\n//# sourceURL=webpack:///./app/router.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _controllers_comments__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./controllers/comments */ \"./app/controllers/comments.js\");\n/* harmony import */ var _controllers_members__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./controllers/members */ \"./app/controllers/members.js\");\n/* harmony import */ var _controllers_ping__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./controllers/ping */ \"./app/controllers/ping.js\");\n\n\n\nvar methods = Object.freeze({\n  GET: 'get',\n  POST: 'post',\n  PUT: 'put',\n  DELETE: 'delete'\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = ([{\n  method: methods.GET,\n  route: '/ping',\n  method_func: _controllers_ping__WEBPACK_IMPORTED_MODULE_2__[\"default\"]\n}, {\n  method: methods.GET,\n  route: '/org/:name/comments',\n  method_func: _controllers_comments__WEBPACK_IMPORTED_MODULE_0__[\"default\"].get\n}, {\n  method: methods.POST,\n  route: '/org/:name/comments',\n  method_func: _controllers_comments__WEBPACK_IMPORTED_MODULE_0__[\"default\"].post\n}, {\n  method: methods.DELETE,\n  route: '/org/:name/comments',\n  method_func: _controllers_comments__WEBPACK_IMPORTED_MODULE_0__[\"default\"][\"delete\"]\n}, {\n  method: methods.GET,\n  route: '/org/:name/members',\n  method_func: _controllers_members__WEBPACK_IMPORTED_MODULE_1__[\"default\"].get\n}]);\n\n//# sourceURL=webpack:///./app/router.js?");
+
+/***/ }),
+
+/***/ "./app/services/comments.js":
+/*!**********************************!*\
+  !*** ./app/services/comments.js ***!
+  \**********************************/
+/*! exports provided: get_comments, set_comment, delete_comments */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"get_comments\", function() { return get_comments; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"set_comment\", function() { return set_comment; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"delete_comments\", function() { return delete_comments; });\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"@babel/runtime/regenerator\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _models_comments__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../models/comments */ \"./app/models/comments.js\");\n\n\nvar get_comments = function get_comments(organization) {\n  var query;\n  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function get_comments$(_context) {\n    while (1) {\n      switch (_context.prev = _context.next) {\n        case 0:\n          query = _models_comments__WEBPACK_IMPORTED_MODULE_1__[\"default\"].find({\n            organization: organization,\n            isDeleted: false\n          });\n          _context.next = 3;\n          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(query.exec());\n\n        case 3:\n          return _context.abrupt(\"return\", _context.sent);\n\n        case 4:\n        case \"end\":\n          return _context.stop();\n      }\n    }\n  });\n};\nvar set_comment = function set_comment(organization, comment) {\n  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function set_comment$(_context2) {\n    while (1) {\n      switch (_context2.prev = _context2.next) {\n        case 0:\n          _context2.next = 2;\n          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(_models_comments__WEBPACK_IMPORTED_MODULE_1__[\"default\"].insertMany([{\n            organization: organization,\n            comment: comment\n          }]));\n\n        case 2:\n        case \"end\":\n          return _context2.stop();\n      }\n    }\n  });\n};\nvar delete_comments = function delete_comments(organization) {\n  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function delete_comments$(_context3) {\n    while (1) {\n      switch (_context3.prev = _context3.next) {\n        case 0:\n          _context3.next = 2;\n          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(_models_comments__WEBPACK_IMPORTED_MODULE_1__[\"default\"].updateMany({\n            organization: organization\n          }, {\n            isDeleted: true\n          }));\n\n        case 2:\n        case \"end\":\n          return _context3.stop();\n      }\n    }\n  });\n};\n\n//# sourceURL=webpack:///./app/services/comments.js?");
+
+/***/ }),
+
+/***/ "./app/services/members.js":
+/*!*********************************!*\
+  !*** ./app/services/members.js ***!
+  \*********************************/
+/*! exports provided: get_members */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"get_members\", function() { return get_members; });\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"@babel/runtime/regenerator\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _models_members__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../models/members */ \"./app/models/members.js\");\n\n\nvar get_members = function get_members(organization) {\n  var query;\n  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function get_members$(_context) {\n    while (1) {\n      switch (_context.prev = _context.next) {\n        case 0:\n          query = _models_members__WEBPACK_IMPORTED_MODULE_1__[\"default\"].find({\n            organization: organization\n          });\n          _context.next = 3;\n          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(query.exec());\n\n        case 3:\n          return _context.abrupt(\"return\", _context.sent);\n\n        case 4:\n        case \"end\":\n          return _context.stop();\n      }\n    }\n  });\n};\n\n//# sourceURL=webpack:///./app/services/members.js?");
 
 /***/ }),
 
