@@ -1,0 +1,20 @@
+{
+  "name": "xendit",
+  "version": "1.0.0",
+  "description": "Full stack software engineer position exam",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josephniel/xendit.git"
+  },
+  "author": "Joseph Niel Tuazon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josephniel/xendit/issues"
+  },
+  "homepage": "https://github.com/josephniel/xendit#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
