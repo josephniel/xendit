@@ -90,11 +90,11 @@
 /*!**************************!*\
   !*** ./app/constants.js ***!
   \**************************/
-/*! exports provided: HOST, PORT */
+/*! exports provided: HOST, PORT, MONGODB_URI */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"HOST\", function() { return HOST; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"PORT\", function() { return PORT; });\nvar HOST = '0.0.0.0';\nvar PORT = 8080;\n\n//# sourceURL=webpack:///./app/constants.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"HOST\", function() { return HOST; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"PORT\", function() { return PORT; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"MONGODB_URI\", function() { return MONGODB_URI; });\nvar HOST = '0.0.0.0';\nvar PORT = 8080;\nvar _process$env = process.env,\n    MONGODB_USERNAME = _process$env.MONGODB_USERNAME,\n    MONGODB_PASSWORD = _process$env.MONGODB_PASSWORD,\n    MONGODB_HOST = _process$env.MONGODB_HOST,\n    MONGODB_PORT = _process$env.MONGODB_PORT,\n    MONGODB_DATABASE = _process$env.MONGODB_DATABASE;\nvar MONGODB_URI = \"mongodb://\".concat(MONGODB_USERNAME, \":\").concat(MONGODB_PASSWORD, \"@\").concat(MONGODB_HOST, \":\").concat(MONGODB_PORT, \"/\").concat(MONGODB_DATABASE);\n\n//# sourceURL=webpack:///./app/constants.js?");
 
 /***/ }),
 

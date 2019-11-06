@@ -20,7 +20,8 @@
   "homepage": "https://github.com/josephniel/xendit#readme",
   "dependencies": {
     "@babel/runtime": "^7.7.1",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongodb": "^3.3.3"
   },
   "devDependencies": {
     "@babel/core": "^7.7.0",
