@@ -1,10 +1,11 @@
 import express from 'express';
-import constants from './constants';
+import controllers from './router';
+import { HOST, PORT } from './constants';
 
-// App
 const app = express();
-app.get('/', (req, res) => {
-  res.send('Hello world\n');
-});
 
-app.listen(constants.PORT, constants.HOST);
+controllers.map(controller => {
+  app[controller.method](controller.route, controller.method_func);
+})
+
+app.listen(PORT, HOST);
