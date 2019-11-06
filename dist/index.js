@@ -81,32 +81,56 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./app/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./constants.js":
-/*!**********************!*\
-  !*** ./constants.js ***!
-  \**********************/
+/***/ "./app/constants.js":
+/*!**************************!*\
+  !*** ./app/constants.js ***!
+  \**************************/
+/*! exports provided: HOST, PORT */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"HOST\", function() { return HOST; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"PORT\", function() { return PORT; });\nvar HOST = '0.0.0.0';\nvar PORT = 8080;\n\n//# sourceURL=webpack:///./app/constants.js?");
+
+/***/ }),
+
+/***/ "./app/controllers/ping.js":
+/*!*********************************!*\
+  !*** ./app/controllers/ping.js ***!
+  \*********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  PORT: 8080,\n  HOST: '0.0.0.0'\n});\n\n//# sourceURL=webpack:///./constants.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nvar entrypoint = function entrypoint(req, res) {\n  res.send('pong');\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (entrypoint);\n\n//# sourceURL=webpack:///./app/controllers/ping.js?");
 
 /***/ }),
 
-/***/ "./index.js":
-/*!******************!*\
-  !*** ./index.js ***!
-  \******************/
-/*! no exports provided */
+/***/ "./app/index.js":
+/*!**********************!*\
+  !*** ./app/index.js ***!
+  \**********************/
+/*! exports provided: app */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants */ \"./constants.js\");\n\n // App\n\nvar app = express__WEBPACK_IMPORTED_MODULE_0___default()();\napp.get('/', function (req, res) {\n  res.send('Hello world\\n');\n});\napp.listen(_constants__WEBPACK_IMPORTED_MODULE_1__[\"default\"].PORT, _constants__WEBPACK_IMPORTED_MODULE_1__[\"default\"].HOST);\nconsole.log(\"Running on http://\".concat(_constants__WEBPACK_IMPORTED_MODULE_1__[\"default\"].PORT, \":\").concat(_constants__WEBPACK_IMPORTED_MODULE_1__[\"default\"].HOST));\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"app\", function() { return app; });\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./router */ \"./app/router.js\");\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./constants */ \"./app/constants.js\");\n\n\n\nvar app = express__WEBPACK_IMPORTED_MODULE_0___default()();\n_router__WEBPACK_IMPORTED_MODULE_1__[\"default\"].map(function (controller) {\n  app[controller.method](controller.route, controller.method_func);\n});\napp.listen(_constants__WEBPACK_IMPORTED_MODULE_2__[\"PORT\"], _constants__WEBPACK_IMPORTED_MODULE_2__[\"HOST\"]);\n\n//# sourceURL=webpack:///./app/index.js?");
+
+/***/ }),
+
+/***/ "./app/router.js":
+/*!***********************!*\
+  !*** ./app/router.js ***!
+  \***********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _controllers_ping__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./controllers/ping */ \"./app/controllers/ping.js\");\n\nvar methods = Object.freeze({\n  GET: 'get',\n  POST: 'post',\n  PUT: 'put',\n  DELETE: 'delete'\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = ([{\n  method: methods.GET,\n  route: '/ping',\n  method_func: _controllers_ping__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\n}]);\n\n//# sourceURL=webpack:///./app/router.js?");
 
 /***/ }),
 
