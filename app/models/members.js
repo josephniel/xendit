@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-import { connection } from './db';
 
 const memberSchema = new mongoose.Schema({
   organization: {
@@ -24,4 +23,4 @@ const memberSchema = new mongoose.Schema({
   },
 });
 
-export default connection.model('members', memberSchema);
+export default mongoose.model('members', memberSchema);
