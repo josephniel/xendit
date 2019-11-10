@@ -1,10 +1,10 @@
 import request from 'supertest';
 import app from '../server';
-import members_service from '../services/members';
+import membersService from '../services/members';
 
 describe('Members API', () => {
   it('should return list of members on GET request', async () => {
-    const spy = jest.spyOn(members_service, 'get_members');
+    const spy = jest.spyOn(membersService, 'getMembers');
     spy.mockReturnValue([{key: 'value'}]);
 
     const res = await request(app).get('/org/xendit/members');

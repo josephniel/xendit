@@ -1,10 +1,10 @@
 import request from 'supertest';
 import app from '../server';
-import comments_service from '../services/comments';
+import commentsService from '../services/comments';
 
 describe('Comments API', () => {
   it('should return list of comments on GET request', async () => {
-    const spy = jest.spyOn(comments_service, 'get_comments');
+    const spy = jest.spyOn(commentsService, 'getComments');
     spy.mockReturnValue([{key: 'value'}]);
 
     const res = await request(app).get('/org/xendit/comments');
@@ -14,7 +14,7 @@ describe('Comments API', () => {
   });
 
   it('should return created comment upon POST request', async () => {
-    const spy = jest.spyOn(comments_service, 'set_comment');
+    const spy = jest.spyOn(commentsService, 'setComment');
     spy.mockReturnValue({key: 'value'});
 
     const res = await request(app).post('/org/xendit/comments').send({
@@ -26,7 +26,7 @@ describe('Comments API', () => {
   });
 
   it('should return successful status on DELETE request', async () => {
-    const spy = jest.spyOn(comments_service, 'delete_comments');
+    const spy = jest.spyOn(commentsService, 'deleteComments');
 
     const res = await request(app).delete('/org/xendit/comments');
     expect(spy).toHaveBeenCalledWith('xendit');

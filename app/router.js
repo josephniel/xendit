@@ -13,26 +13,26 @@ export default [
   {
     method: methods.GET,
     route: '/ping',
-    method_func: ping,
+    methodFunc: ping,
   },
   {
     method: methods.GET,
     route: '/org/:name/comments',
-    method_func: comments.get,
+    methodFunc: comments.get,
   },
   {
     method: methods.POST,
     route: '/org/:name/comments',
-    method_func: comments.post,
+    methodFunc: comments.post,
   },
   {
     method: methods.DELETE,
     route: '/org/:name/comments',
-    method_func: comments.delete,
+    methodFunc: comments.delete,
   },
   {
     method: methods.GET,
     route: '/org/:name/members',
-    method_func: members.get,
+    methodFunc: members.get,
   },
 ];

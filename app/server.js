@@ -11,7 +11,7 @@ mongoose.connect(MONGODB_URI, (err) => { if (err) throw err; });
 app.use(express.json());
 
 controllers.map(controller => {
-  app[controller.method](controller.route, controller.method_func);
+  app[controller.method](controller.route, controller.methodFunc);
 })
 
 export default app;
