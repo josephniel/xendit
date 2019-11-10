@@ -1,9 +1,10 @@
-import { get_members } from '../services/members';
+import members_service from '../services/members';
 
 export default {
   get: async (req, res) => {
     const organization = req.params.name;
-    const members = await get_members(organization);
-    res.send({ members }).status(200);
+    res.status(200).send({
+      members: await members_service.get_members(organization),
+    });
   },
 };
